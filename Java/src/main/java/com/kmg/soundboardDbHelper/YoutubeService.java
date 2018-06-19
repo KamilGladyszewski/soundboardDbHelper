@@ -11,7 +11,7 @@ import com.google.api.services.youtube.model.VideoListResponse;
 
 public class YoutubeService {
 	private YouTube youtube;
-	private final String API_KEY = "AIzaSyCQmpo7d4C55RoflWFDl799h147l30v9S0";
+	private final String API_KEY = "<YouTube API Key>";
 	
 	public Video getVideo(String vidId) {
 		youtube = getYouTube();
