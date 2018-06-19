@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+
+	<div class="container">
+	<table>
+		<tr th:each="video : ${videos}">
+            <td>
+            	<img th:src = "${video.key.snippet.thumbnails.high.url}">
+            	 <h4 th:text="${video.key.snippet.localized.title}"></h4>
+            	<br>
+            <br>
+            <br>
+            </td>
+            <td>
+            	<ul style = "display: inline-block; font-size: 200%">
+            		<li th:each="sound: ${video.value}">
+            			<a th:href="${'https://youtu.be/' + video.key.id + '?t=' + sound.value }" th:text="${sound.key}"></a>
+            		</li>
+            	</ul>
+            </td>
+	           
+            
+        </tr>
+	</table>
+	</div>
+
+	<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
