@@ -13,6 +13,7 @@ public class YoutubeService {
 	private YouTube youtube;
 	private final String API_KEY = "<YouTube API Key>";
 	
+	//return a video matching given id
 	public Video getVideo(String vidId) {
 		youtube = getYouTube();
 		HashMap<String, String> params = new HashMap<>();
@@ -34,6 +35,8 @@ public class YoutubeService {
 		}
 		return null;
 	}
+	
+	//check whether a video was posted to a specific channel
 	public boolean isFromChannel(String vidId, String channelId) {
 		boolean isOk = false;
 		youtube = getYouTube();
@@ -66,6 +69,7 @@ public class YoutubeService {
 		return isOk;
 	}
 	
+	//get an id of a channel from an examle video id
 	public String getChannelId(String exampleId) {
 		youtube = getYouTube();
 		HashMap<String, String> params = new HashMap<>();
