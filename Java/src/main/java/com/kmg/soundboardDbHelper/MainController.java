@@ -30,6 +30,7 @@ public class MainController {
 	public String welcome() {
 		return "hello";
 	}
+	//get a number of seconds from minutes:seconds format
 	public String getSeconds(Time time) {
 		int min = time.getHours();
 		int sec = time.getMinutes();
@@ -46,9 +47,9 @@ public class MainController {
 			model.addAttribute("numberOfVideos", 0);
 		}
 		
-		
+		//add a list of video objects to browser's model
 		model.addAttribute("videos", videos);
-		
+		//open showResults.html
 		return "showResults";
 	}
 	
