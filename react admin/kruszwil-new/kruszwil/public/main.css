@@ -1,0 +1,11 @@
+.row{
+    margin-top: 15px;
+}
+.soundList{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+}
+.video-img{
+}
